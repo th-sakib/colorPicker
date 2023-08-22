@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+}
+
+section.container h1 {
+    color: lightblue;
+    padding: 1rem;
+}
+
+.button, .input {
+    display: flex;
+    justify-content: center;
+}
+
+button#colorChanger {
+    padding: 1rem !important;
+    margin: 1rem;
+    background: greenyellow;
+    border-radius: 12px;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#colorChanger:hover, #copyBtn:hover {
+    background: rgba(153, 255, 0, 0.959);
+}
+
+#colorChanger:focus{
+    outline: 2px dashed greenyellow;
+    outline-offset: 3px;
+}
+
+/*input field design*/
+input[type="text"] {
+    background: black;
+    color: #fff;
+    border: none;
+    outline: 1px dashed #FFF;
+    border-radius: 12px;
+    outline-offset: 3px;
+    padding: 2px;
+}
+
+/* styling copy button */
+#copyBtn {
+    padding: 1px;
+    background: greenyellow;
+    margin-left: 1px;
+    border-radius: 5px;
+}
