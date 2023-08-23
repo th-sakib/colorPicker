@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Tilt+Prism&family=Wavefont:wght@900&display=swap');
+/* font-family: 'Barriecito', cursive;
+font-family: 'Tilt Prism', cursive;
+font-family: 'Wavefont', cursive; */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +18,24 @@ body {
 }
 
 section.container h1 {
-    color: lightblue;
+    background: linear-gradient(to right, rgb(0, 26, 255), rgb(0, 217, 255));
     padding: 1rem;
+    font-family: 'Tilt Prism', cursive;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -5px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.button, .input {
+.hidden-messege p {
+    font-family: 'Wavefont', cursive;
+    position: absolute;
+    bottom: 0;
+    left: 42vw;
+    font-size: 4rem;
+}
+
+.button,
+.input {
     display: flex;
     justify-content: center;
 }
@@ -33,11 +51,15 @@ button#colorChanger {
     cursor: pointer;
 }
 
-#colorChanger:hover, #copyBtn:hover {
+#colorChanger:hover {
     background: rgba(153, 255, 0, 0.959);
 }
 
-#colorChanger:focus{
+#copyBtn:hover {
+    background: rgb(43, 43, 44);
+}
+
+#colorChanger:focus {
     outline: 2px dashed greenyellow;
     outline-offset: 3px;
 }
@@ -52,11 +74,61 @@ input[type="text"] {
     outline-offset: 3px;
     padding: 2px;
 }
+input[type="color"] {
+	width: 2rem;
+	margin: 0 8px;
+}
 
 /* styling copy button */
 #copyBtn {
-    padding: 1px;
-    background: greenyellow;
-    margin-left: 1px;
-    border-radius: 5px;
+    padding: 4px;
+    background: black;
+    margin-left: 1rem;
+    border-radius: 2px;
+    color: white;
+    font-family: Barriecito;
+}
+
+/* toast messege styling */
+.toastContainer {
+    width: 20%;
+    height: auto;
+    background: rgba(153, 255, 0, 0.959);
+    outline: 1px solid gray;
+    border: 1px solid black;
+    color: black;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    top: 2%;
+    right: 3%;
+    /* display: none; */
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3)
+}
+.animation-coming {
+    animation: toastComing 0.2s ease-in;
+}
+.animation-going {
+    animation: toastGoing .2s ease-in;
+}
+@keyframes toastComing{
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes toastGoing{
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(200px);
+        opacity: 0;
+    }
 }
