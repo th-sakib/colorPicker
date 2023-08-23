@@ -94,5 +94,6 @@ const inputColor = document.getElementById('color-text');
 inputColor.addEventListener('input', function(){
     const inputColor = this.value;
     document.getElementById('body').style.background = inputColor;
+    document.getElementById('text').value = inputColor;
 
 })
