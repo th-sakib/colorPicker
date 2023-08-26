@@ -72,11 +72,23 @@ input[type="text"] {
     outline: 1px dashed #FFF;
     border-radius: 12px;
     outline-offset: 3px;
-    padding: 2px;
+    padding: 2px 1.5rem;
 }
+
+#flexed-hashtag::before {
+	content: '\23';
+	color: #fff;
+	border: none;
+	padding: 3px 6px;
+	position: absolute;
+	display: inline-block;
+	font-size: 1.3rem;
+	font-weight: bolder;
+}
+
 input[type="color"] {
-	width: 2rem;
-	margin: 0 8px;
+    width: 2rem;
+    margin: 0 8px;
 }
 
 /* styling copy button */
@@ -106,27 +118,33 @@ input[type="color"] {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3)
 }
+
 .animation-coming {
     animation: toastComing 0.2s ease-in;
 }
+
 .animation-going {
     animation: toastGoing .2s ease-in;
 }
-@keyframes toastComing{
+
+@keyframes toastComing {
     from {
         transform: translateX(200px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
     }
 }
-@keyframes toastGoing{
+
+@keyframes toastGoing {
     from {
         transform: translateX(0);
         opacity: 1;
     }
+
     to {
         transform: translateX(200px);
         opacity: 0;
